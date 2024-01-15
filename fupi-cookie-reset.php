@@ -2,12 +2,12 @@
 /**
  * Plugin Name:     Reset WP Full Picture cookie settings
  * Plugin URI:      https://cookies.mpress.cc
- * Description:     Helper plugin to allow reseting WP Full Picture cookie preferences. Use shortcode: [fupi_reset] or [fupi_reset text="Your Custom Text"] in your footer or privacy policy page. Or add 'fupi-reset' class to any element that should trigger the function for reset.
+ * Description:     Helper plugin to allow reseting WP Full Picture cookie preferences. Use shortcode: [fupi_reset] or [fupi_reset text="Your Custom Text"] in your footer or privacy policy page. Or add 'fupi-reset' class to any element that should trigger the function for reset. Use [fupi_reset display="0"] to just use javascript and class method.
  * Author:          Mateusz Zadorozny mpress.cc
  * Author URI:      https://mpress.cc
  * Text Domain:     fupi-cookie-reset
  * Domain Path:     /languages
- * Version:         1.0.0
+ * Version:         1.0.1
  *
  * @package         Fupi_Cookie_Reset
  */
