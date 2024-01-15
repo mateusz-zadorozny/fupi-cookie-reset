@@ -30,6 +30,7 @@ function fupi_reset_shortcode($atts)
     $atts = shortcode_atts(
         array(
             'text' => 'Reset cookie preferences',
+            'display' => true,
         ),
         $atts
     );
@@ -37,8 +38,12 @@ function fupi_reset_shortcode($atts)
     // Enqueue the JavaScript file
     wp_enqueue_script('fupi-reset-script', plugins_url('fupi-reset-script.js', __FILE__), array(), '1.0', true);
 
-    // Return the link HTML
-    return '<a href="#" onclick="deleteCookiesAndReload(); return false;">' . esc_html($atts['text']) . '</a>';
+    if ($atts['display'] !== '0') {
+        // Return the link HTML
+        return '<a class="fupi-reset-link" href="#" onclick="deleteCookiesAndReload(); return false;">' . esc_html($atts['text']) . '</a>';
+    } else
+        return '';
+
 }
 
 add_shortcode('fupi_reset', 'fupi_reset_shortcode');
